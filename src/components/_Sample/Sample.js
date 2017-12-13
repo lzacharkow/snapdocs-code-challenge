@@ -1,17 +1,31 @@
 import React from 'react';
 import './styles.css';
 
-function Sample({ name }) {
+function Sample({ name, onChangeHandler }) {
 	return (
-		<div>
-			<h1 className="sample__heading">{name}</h1>
-			<p className="sample__paragraph">This is the paragraph.</p>
+		<div className="sample">
+			<h1 className="sample__heading">
+				My cat’s name is {name}.
+			</h1>
+
+			<label className="sample__input__label" htmlFor="cat-name">
+				Enter a new name:
+			</label>
+			<input
+				id="cat-name"
+				type="text"
+				onChange={onChangeHandler}
+			/>
 		</div>
 	);
 }
 
-Sample.defaultProps = {
-	name: 'Sample',
-};
+// Sample.defaultProps = {
+// 	...
+// };
+//
+// Sample.propTypes = {
+// 	...
+// };
 
 export default Sample;

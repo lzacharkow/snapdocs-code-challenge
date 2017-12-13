@@ -1,9 +1,13 @@
-@import 'styles/index';
+@import 'styles/design-system/index';
 
-.sample__heading {
-	color: orange;
+.sample {
+	padding: $spacing*2;
 }
 
-.sample__paragraph {
-	color: orange;
+.sample__heading {
+	color: $green;
+}
+
+.sample__input__label {
+	margin-right: $spacing;
 }
