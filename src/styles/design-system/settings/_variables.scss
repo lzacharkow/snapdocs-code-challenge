@@ -1,0 +1,54 @@
+// Fonts
+$font-family--base: 'Helvetica', sans-serif;
+
+$font-size--xxl: 2rem;
+$font-size--xl: 1.5rem;
+$font-size--l: 1.25rem;
+$font-size--m: 1rem;
+$font-size--s: 0.75rem;
+$font-size--base: 100%; // 16px
+$font-size--base--small: 87.5%; // 14px
+
+$line-height--base: 1.5;
+
+$font-weight--light: 300;
+$font-weight--regular: 500;
+$font-weight--bold: 700;
+$font-weight--base: $font-weight--regular;
+
+
+// Colors
+$blue: #3C85EF;
+$green: #5A8B74;
+$green--light: #eff5f2;
+$yellow: #F1E298;
+$orange: #F0AE77;
+$red: #D7655C;
+$black: #121212;
+$gray: #ADADBC;
+$gray--light: #F5F5F7;
+$white: #FFFFFF;
+
+$color--success: $green;
+$color--warning: $orange;
+$color--error: $red;
+
+$bg-color: $white;
+$bg-color--alt: $gray--light;
+
+$font-color: $black;
+
+
+// Layout
+$spacing: 1rem;
+$half-spacing: 0.5rem;
+$quarter-spacing: 0.25rem;
+
+
+// Breakpoints
+$small-upper-bound: 640px;
+$large-lower-bound: 1441px;
+
+$small: 'only screen and (max-width: $small-upper-bound)';
+$medium: 'only screen and (min-width: $small-upper-bound)';
+$large: 'only screen and (min-width: $large-lower-bound)';

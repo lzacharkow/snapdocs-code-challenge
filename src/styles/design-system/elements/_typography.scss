@@ -1,0 +1,36 @@
+%h1 {
+	font-size: $font-size--xxl;
+	font-weight: $font-weight--bold;
+}
+
+%h2 {
+	font-size: $font-size--xl;
+	font-weight: $font-weight--bold;
+}
+
+%h3 {
+	font-size: $font-size--l;
+	font-weight: $font-weight--bold;
+}
+
+%p {
+	font-size: $font-size--m;
+}
+
+%p--headline {
+	font-size: $font-size--l;
+}
+
+%p--disclaimer {
+	font-size: $font-size--s;
+	color: $gray;
+}
+
+%a {
+	color: $blue;
+	text-decoration: none;
+	font-weight: $font-weight--bold;
+	&:hover {
+		text-decoration: underline;
+	}
+}

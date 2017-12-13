@@ -1,0 +1,49 @@
+@import 'styles/design-system/index';
+
+
+// Base styles
+
+html {
+	font-size: $font-size--base;
+	@media #{$small} {
+		font-size: $font-size--base--small;
+	}
+}
+
+body {
+	font-family: $font-family--base;
+	line-height: $line-height--base;
+	background: $bg-color;
+	color: $font-color;
+}
+
+
+// Globally available element styles
+
+h1 {
+	@extend %h1;
+}
+
+h2 {
+	@extend %h2;
+}
+
+h3 {
+	@extend %h3;
+}
+
+p {
+	@extend %p;
+}
+
+.p--headline {
+	@extend %p--headline;
+}
+
+.p--disclaimer {
+	@extend %p--disclaimer;
+}
+
+a {
+	@extend %a;
+}
