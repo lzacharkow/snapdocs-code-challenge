@@ -3,7 +3,7 @@ import './styles.css';
 
 function Sample({ name, onChangeHandler }) {
 	return (
-		<div className="sample">
+		<div className="page-wrapper">
 			<h1 className="sample__heading">
 				My cat’s name is {name}.
 			</h1>
@@ -11,6 +11,7 @@ function Sample({ name, onChangeHandler }) {
 			<label className="sample__input__label" htmlFor="cat-name">
 				Enter a new name:
 			</label>
+
 			<input
 				id="cat-name"
 				type="text"

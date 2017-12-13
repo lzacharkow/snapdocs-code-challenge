@@ -47,3 +47,7 @@ p {
 a {
 	@extend %a;
 }
+
+.page-wrapper {
+	padding: $spacing*2;
+}
