@@ -1,8 +1,13 @@
 import React from 'react';
-import Sample from '../../components/_Sample';
+import { Link } from 'react-router-dom';
 
 function SampleRoute({ match }) {
-	return <Sample />;
+	return (
+		<div className="page-wrapper">
+			<h1>Welcome to a sample route!</h1>
+			<Link to="/">Go back</Link>
+		</div>
+	);
 }
 
 export default SampleRoute;
