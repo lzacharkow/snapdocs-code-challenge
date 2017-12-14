@@ -5,26 +5,21 @@ import {
 	Link,
 } from 'react-router-dom';
 
-import Sample from './components/_Sample';
+import SampleRoute from './routes/_SampleRoute';
 import './styles/base-styles/index.css';
-
-
-function Home() {
-	return (
-		<div className="page-wrapper">
-			<h1>Welcome to the root!</h1>
-			<Link to="/sample">Redux sample</Link>
-		</div>
-	);
-}
 
 class App extends Component {
 	render() {
 		return (
 			<Router>
 				<div>
-					<Route path="/" exact component={Home} />
-					<Route path="/sample" exact component={Sample} />
+					<Route path="/" exact render={() => (
+						<div className="page-wrapper">
+							<h1>Welcome to the root!</h1>
+							<Link to="/sample">Redux sample</Link>
+						</div>
+					)} />
+					<Route path="/sample" exact component={SampleRoute} />
 				</div>
 			</Router>
 		);

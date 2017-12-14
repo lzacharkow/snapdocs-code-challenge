@@ -1,6 +1,7 @@
 import {
 	SET_SAMPLE_NAME,
-	SECRET_NAME,
+	MAGIC_WORD,
+	MAGIC_WORD_RESPONSE,
 } from '../constants';
 
 function setSampleName(name) {
@@ -15,8 +16,8 @@ function setSampleName(name) {
 export function setSampleNameThunk(name) {
 	return (dispatch, getState) => {
 		// Check if the user said the magic word.
-		return name === 'Beep'
-			? dispatch(setSampleName(SECRET_NAME))
+		return name === MAGIC_WORD
+			? dispatch(setSampleName(MAGIC_WORD_RESPONSE))
 			: dispatch(setSampleName(name));
 	};
 }
