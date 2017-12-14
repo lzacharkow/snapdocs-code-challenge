@@ -2,20 +2,30 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import _ from 'lodash';
 import './styles.css';
+
+import CandidatesListCandidate from './CandidatesListCandidate';
 
 function CandidatesList({ employees }) {
 	// Iterate through employees
 	// hide inactive
 	// show name age and email in list
-	console.log('employees: ', employees);
+	const filteredEmployees = _.chain(employees)
+		.map((employee, key) => ({
+			...employee,
+			id: key,
+		}))
+		.filter(['active', true])
+		.value();
 
 	return (
 		<div>
-			{employees.map((employee) => {
+			{filteredEmployees.map((employee) => {
 				return (
 					<CandidatesListCandidate
-						key={employee.name}
+						key={employee.id}
 						id={employee.id}
 						active={employee.active}
 						name={employee.name}
@@ -24,24 +34,6 @@ function CandidatesList({ employees }) {
 					/>
 				);
 			})}
-		</div>
-	);
-}
-
-function CandidatesListCandidate({
-	id,
-	active,
-	name,
-	age,
-	email,
-}) {
-	return (
-		<div>
-			{id}<br />
-			{active}<br />
-			{name}<br />
-			{age}<br />
-			{email}
 		</div>
 	);
 }
