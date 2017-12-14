@@ -1,3 +1,5 @@
+/* eslint-disable import/prefer-default-export */
+
 import { SET_SAMPLE_NAME } from '../constants';
 
 export function setSampleName(name) {
@@ -5,6 +7,6 @@ export function setSampleName(name) {
 		type: SET_SAMPLE_NAME,
 		payload: {
 			name,
-		}
+		},
 	};
 }
