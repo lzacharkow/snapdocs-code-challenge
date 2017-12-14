@@ -12,3 +12,4 @@ I added these integrations:
 - SCSS & base styles
 - Redux & thunks
 - React-router
+- Firebase
