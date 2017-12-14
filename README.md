@@ -10,4 +10,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 I added these integrations:
 - SCSS & base styles
-- Redux
+- Redux & thunks
+- React-router

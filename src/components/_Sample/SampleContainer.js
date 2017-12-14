@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import Sample from './Sample';
-import { setSampleName } from '../../actions/sample';
+import { setSampleNameThunk } from '../../actions/sample';
 
 const mapStateToProps = state => ({
 	name: state.sample.name,
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
 	onChangeHandler: e => {
-		dispatch(setSampleName(e.target.value));
+		dispatch(setSampleNameThunk(e.target.value));
 	},
 });
 

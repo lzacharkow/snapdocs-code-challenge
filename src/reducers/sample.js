@@ -1,4 +1,4 @@
-import { SET_SAMPLE_NAME } from '../actions/sample';
+import { SET_SAMPLE_NAME } from '../constants';
 
 const initialState = {
 	name: 'Sample',
