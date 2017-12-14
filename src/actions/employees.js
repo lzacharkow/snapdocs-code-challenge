@@ -2,14 +2,14 @@
 /* eslint-disable import/prefer-default-export */
 
 import {
-	SET_SAMPLE_NAME,
+	SET_EMPLOYEES,
 } from '../constants';
 
-export function setSampleName(name) {
+export function setEmployees(employees) {
 	return {
-		type: SET_SAMPLE_NAME,
+		type: SET_EMPLOYEES,
 		payload: {
-			name,
+			employees,
 		},
 	};
 }

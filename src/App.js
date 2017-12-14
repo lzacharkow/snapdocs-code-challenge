@@ -18,7 +18,6 @@ function App() {
 			<Switch>
 				<Route exact path="/" component={CandidatesRoute} />
 				<Route path="/:id" component={CandidateRoute} />
-				<Route path="/sample-route" component={SampleRoute} />
 				<Route render={() => <h1>4🐱4</h1>} />
 			</Switch>
 		</Router>

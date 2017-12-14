@@ -3,4 +3,4 @@
 
 import firebaseDb from './index';
 
-export const name = firebaseDb.ref().child('name');
+export const employees = firebaseDb.ref().child('employees');

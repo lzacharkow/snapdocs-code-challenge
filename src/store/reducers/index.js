@@ -4,7 +4,9 @@
 import { combineReducers } from 'redux';
 
 import sample from './sample';
+import employees from './employees';
 
 export default combineReducers({
 	sample,
+	employees,
 });

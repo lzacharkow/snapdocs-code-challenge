@@ -12,3 +12,4 @@ export const FIREBASE_CONFIG = {
 
 // Actions
 export const SET_SAMPLE_NAME = 'SET_SAMPLE_NAME';
+export const SET_EMPLOYEES = 'SET_EMPLOYEES';

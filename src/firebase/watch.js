@@ -2,9 +2,9 @@
 /* eslint-disable import/prefer-default-export */
 
 import store from '../store';
-import { name } from './items';
-import { setSampleName } from '../actions/sample';
+import { employees } from './items';
+import { setEmployees } from '../actions/employees';
 
-name.on('value', (dataSnapshot) => {
-	store.dispatch(setSampleName(dataSnapshot.val()));
+employees.on('value', (dataSnapshot) => {
+	store.dispatch(setEmployees(dataSnapshot.val()));
 });
