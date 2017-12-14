@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css';
+import { updateName } from '../../firebase/update';
 
 function Sample({ name, onChangeHandler }) {
 	return (
@@ -15,18 +16,10 @@ function Sample({ name, onChangeHandler }) {
 			<input
 				id="cat-name"
 				type="text"
-				onChange={onChangeHandler}
+				onChange={(e) => { updateName(e.target.value); }}
 			/>
 		</div>
 	);
 }
-
-// Sample.defaultProps = {
-// 	...
-// };
-//
-// Sample.propTypes = {
-// 	...
-// };
 
 export default Sample;

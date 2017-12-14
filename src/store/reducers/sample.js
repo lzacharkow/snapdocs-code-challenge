@@ -1,7 +1,7 @@
-import { SET_SAMPLE_NAME } from '../constants';
+import { SET_SAMPLE_NAME } from '../../constants';
 
 const initialState = {
-	name: 'Sample',
+	name: 'Loading...',
 };
 
 const sample = (state = initialState, action) => {

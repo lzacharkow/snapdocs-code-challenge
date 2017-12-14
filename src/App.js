@@ -19,7 +19,7 @@ class App extends Component {
 							<Link to="/sample">Redux sample</Link>
 						</div>
 					)} />
-					<Route path="/sample" exact component={SampleRoute} />
+					<Route path="/sample" component={SampleRoute} />
 				</div>
 			</Router>
 		);
