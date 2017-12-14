@@ -1,3 +1,5 @@
+// Container component... Connects to redux store
+
 import { connect } from 'react-redux';
 
 import Sample from './Sample';

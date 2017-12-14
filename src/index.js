@@ -6,6 +6,7 @@ import store from './store';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+// Import our watchers, which also initilize Firebase.
 import './firebase/watch';
 
 render(

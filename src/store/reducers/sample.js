@@ -1,3 +1,5 @@
+// A sample reducer.
+
 import { SET_SAMPLE_NAME } from '../../constants';
 
 const initialState = {
