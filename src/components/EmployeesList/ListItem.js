@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { EMPLOYEES_ROUTE } from '../../constants';
 
 function ListItem({
 	id,
@@ -6,9 +8,10 @@ function ListItem({
 	name,
 	age,
 	email,
+	match,
 }) {
 	return (
-		<Link to={`/${id}`}>
+		<Link to={`${EMPLOYEES_ROUTE}/${id}`}>
 			{id}<br />
 			{active}<br />
 			{name}<br />
