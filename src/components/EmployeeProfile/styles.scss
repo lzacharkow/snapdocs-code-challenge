@@ -77,4 +77,12 @@ $employee-profile-card__image-column-width: 120px;
 		border-top: 1px solid $divider-color;
 		padding-top: $half-spacing
 	}
+
+	@media #{$small} {
+		display: block;
+
+		h3 {
+			margin-right: 0;
+		}
+	}
 }

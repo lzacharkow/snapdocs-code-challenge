@@ -23,8 +23,6 @@ function EmployeeProfileRoute({
 		currentPage: isLoading ? 'Loading...' : employeeName,
 	};
 
-	console.log(breadcrumbs);
-
 	return (
 		<div className="page-inner-wrapper page-inner-wrapper--employee-profile">
 			<Breadcrumbs

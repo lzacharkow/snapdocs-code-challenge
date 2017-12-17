@@ -47,14 +47,14 @@ function EmployeeProfile({
 						<h3>Email</h3>
 						<p>{employee.email}</p>
 					</div>
-					<p className="employee-profile-card__details__row">
+					<div className="employee-profile-card__details__row">
 						<h3>Age</h3>
 						<p>{getAge(employee.date_of_birth)} years old</p>
-					</p>
-					<p className="employee-profile-card__details__row">
+					</div>
+					<div className="employee-profile-card__details__row">
 						<h3>Status</h3>
 						<p>{employee.active ? 'Active' : 'Not active'}</p>
-					</p>
+					</div>
 				</div>
 			</div>
 
