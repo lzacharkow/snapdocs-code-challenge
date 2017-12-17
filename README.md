@@ -1,9 +1,20 @@
 This is my boilerplate for the Snapdocs code challenge.
 
+**Contents:**
+* [Setup & Running it](#setup--running-it)
+* [Boilerplate](#boilerplate-info)
+* [The prompt](#the-prompt)
+* [Taking it further](#taking-it-further)
+	* [Step 1: Who is this for?](#step-1-who-is-this-for)
+	* [Step 2: Define design goals.](#step-2-define-design-goals)
+	* [Step 3: Design!](#step-3-design)
+	* [Step 4: Build common components](#step-4-build-common-components)
+	* [Step 5: Assemble the pages.](#step-5-assemble-the-pages)
+
 # Setup & Running it
-```
-yarn install && yarn start
-```
+* Setup: `yarn install`
+* Running it: `yarn start`
+* Running storybook (to see the components): `yarn run build-css && yarn run storybook`
 
 # Boilerplate info
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
