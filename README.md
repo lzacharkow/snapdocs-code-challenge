@@ -126,5 +126,5 @@ To see it, run it! `yarn start`.
 - **White-label ready.** If you change the `$client-primary-color` variable in the styles you'll see all of the colors change in the app. (Admittedly, this doesn't hold up if you use light colors... but you get the idea!)
 
 ## What I'd do next
-1. Build more functionality like filters and pagination. To make filters, I would add action creators dispatched from the filter controllers that store the current filter selections in redux, then I would filter the employee list by the current filter selections in [`EmployeeListContainer`](/src/components/EmployeeList/EmployeeListContainer.js), where I'm already mapping the employees to a list form.
+1. Build more functionality like filters and pagination. To make filters, I would dispatch actions from the filter components and store the current selections in redux, then I would filter the employee list by those selections in [`EmployeeListContainer`](https://github.com/lzacharkow/snapdocs-code-challenge/blob/master/src/components/EmployeesList/EmployeesListContainer.js), where I'm already mapping the employees to a list form.
 2. Write unit tests where they're useful.
