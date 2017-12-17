@@ -8,6 +8,7 @@ import './styles.css';
 
 function Button({
 	href,
+	callback,
 	secondary,
 	children,
 }) {
@@ -16,21 +17,31 @@ function Button({
 		'button--secondary': secondary,
 	});
 
+	if (href) {
+		return (
+			<Link to={href} className={classes}>
+				{children}
+			</Link>
+		);
+	}
+
 	return (
-		<Link to={href} className={classes}>
+		<button className={classes} onClick={callback()}>
 			{children}
-		</Link>
+		</button>
 	);
 }
 
 Button.propTypes = {
 	href: PropTypes.string,
+	callback: PropTypes.func,
 	secondary: PropTypes.bool,
 	children: PropTypes.node,
 };
 
 Button.defaultProps = {
 	href: '',
+	callback: () => null,
 	secondary: false,
 	children: 'Default button text',
 };
