@@ -70,9 +70,9 @@ _Note: My fake app is called "Employee World" and has an intentionally bad logo.
 - Inactive employees take inactive styles.
 
 _🕓 Features for later:_
-- Filters. (this would take more time than the total 2 hours allows)
+- Filters.
 - Add new employee button.
-- Pagination
+- Pagination.
 
 ### Employee profile
 
@@ -93,7 +93,38 @@ _🕓 Features for later:_
 ![Header and Notification](/designs/Global/Header%20and%20Notification.png)
 
 #### ✅ Features implemented in code:
-- Application-wide error banner communicates if there was a problem getting employee data.
+- Static header
 
 _🕓 Features for later:_
-- Account & admin links in the header.
+- Error banner synced with Firebase. (I made an error banner that you can see when you run storybook but I didn't hook it up to any real error events.)
+- Authentication
+
+## Step 4: Build common components
+A few patterns/components emerge from the designs:
+- Status banners (built)
+- Buttons (built)
+- Breadcrumbs (built)
+- Text Inputs
+- Checkboxes
+
+I leveraged [Storybook](https://storybook.js.org/) to build a few of these and test all the states.
+
+**To see the components,** compile the styles `yarn run watch-css` then run storybook `yarn run storybook`.
+
+## Step 5: Assemble the pages.
+To see it, run it! `yarn start`.
+
+### Some thoughts that drove the way I built it...
+- **Connected components instead of passed props.** I like making components that talk directly to Redux to get the information they need. This ensures that every component has fresh data coming straight from the source. I've been burnt in the past from passing props from one child to another until the props end up getting semantically abstracted and confusing, or they don't update as expected because somewhere up the chain there was a problem. Connected components feel "flatter" to me, and therefore behave more reliably.
+- **ITCSS style organization.** I organized my boilerplate design system (`styles/design-system`) using [ITCSS (Inverted Triangle CSS)](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) methodology, which organizes styles according to the cascade. This ensures that elemental pieces like variables and mixins are defined before they're used by larger elements like objects and components.
+- **BEM css naming conventions.** Just like I mentioned that I like connected components because they feel "flat" and behave more reliably, I like [BEM (Block, Element, Modifier)](http://getbem.com/) CSS because it allows flat but semantically clear class names. And I've gotten great feedback from my CSS-averse peers who've said BEM class names make it easy to de-bug CSS.
+- **A light but flexible design system.** There are two main problems I've come across working with design systems that I've attempted to solve here:
+	1. _Issue:_ Design systems result in style duplication when imported by many different components.
+		* _Solution:_ This design system only includes SCSS variables, mixins, and placeholders. When used alone, these things don't compile to any real CSS—they need to be referenced or extended to compile. Therefore, the component only uses what it needs and compiles just enough CSS.
+	2. _Issue:_ Inheritance issues arise when many classes leverage but modify the same styles.
+		* _Solution:_ Because this design system declares sharable styles as [placeholders](http://sass-lang.com/documentation/file.SASS_REFERENCE.html#Placeholder_Selectors___foo) which are `@extend`-ed by BEM-style name-spaced classes on each component, inheritance issues are avoided. If a class needs to be shared across many components, it can go in `styles/base-styles`, which are imported once at the root of the project in `App.js` and available without declaration to all child elements.
+- **White-label ready.** If you change the `$client-primary-color` variable in the styles you'll see all of the colors change in the app. (Admittedly, this doesn't hold up if you use light colors... but you get the idea!)
+
+## What I'd do next
+1. Build more functionality like filters and pagination. To make filters, I would add action creators dispatched from the filter controllers that store the current filter selections in redux, then I would filter the employee list by the current filter selections in [`EmployeeListContainer`](/src/components/EmployeeList/EmployeeListContainer.js), where I'm already mapping the employees to a list form.
+2. Write unit tests where they're useful.
