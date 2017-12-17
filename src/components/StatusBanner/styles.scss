@@ -1,0 +1,41 @@
+// Import & extend the design system.
+
+@import 'styles/design-system/index';
+
+.status-banner {
+	width: 100%;
+	background-color: $bg-color--alt;
+	border-radius: $border-radius;
+	padding: $spacing;
+	text-align: center;
+}
+
+.status-banner__message {
+	@extend %p;
+	font-weight: bold;
+}
+
+.status-banner__message__icon {
+	@include size(1em);
+	vertical-align: -0.1em;
+	margin-right: $quarter-spacing;
+}
+
+.status-banner__sub-message {
+	font-size: $font-size--s;
+
+	a {
+		@extend %link--secondary;
+	}
+}
+
+
+// States
+
+.status-banner--error {
+	background-color: $error-color--light;
+
+	.status-banner__message {
+		color: $error-color;
+	}
+}

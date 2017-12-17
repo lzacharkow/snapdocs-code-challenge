@@ -22,22 +22,13 @@ $primary-color: #526CFF !default;
 $primary-color--lightest: scale-color($primary-color, $lightness: 85%);
 $primary-color--darkest: scale-color($primary-color, $lightness: -70%);
 
-$blue: #3C85EF;
-$green: #5A8B74;
-$green--light: #eff5f2;
-$yellow: #F1E298;
-$orange: #F0AE77;
-$red: #D7655C;
+$error-color: #FF3B6D;
+$error-color--light: scale-color($error-color, $lightness: 90%);
 
 $black: $primary-color--darkest;
-$gray: #ADADBC;
-$gray--light: #F5F5F7;
+$gray: scale-color($primary-color, $lightness: 70%, $saturation: -50%);
+$gray--light: scale-color($primary-color, $lightness: 90%, $saturation: -50%);
 $white: #FFFFFF;
-
-$color--success: $green;
-$color--warning: $orange;
-$color--error: $red;
-
 
 // Element colors
 $font-color: $black;
@@ -64,6 +55,8 @@ $page-vertical-padding: $spacing*2;
 $page-padding: $page-vertical-padding $page-side-padding;
 
 $page-max-width: 980px;
+
+$border-radius: 6px;
 
 
 // Breakpoints
