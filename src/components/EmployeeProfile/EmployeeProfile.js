@@ -17,6 +17,11 @@ function EmployeeProfile({
 		? <StatusBanner message="This employee is no longer with this company." />
 		: null;
 
+	const employeeImgStyle = {
+		// This is where we'd use the employee id to get the image for them.
+		backgroundImage: '',
+	};
+
 	if (isLoading) {
 		return null;
 	}
@@ -29,7 +34,7 @@ function EmployeeProfile({
 
 				{/* Image, Name, Bio, & edit */}
 				<div className="employee-profile-card__summary">
-					<img className="employee-profile-card__summary__image" src="" alt={employee.name} />
+					<div className="employee-profile-card__summary__image" style={employeeImgStyle} />
 					<div className="employee-profile-card__summary__info">
 						<div className="employee-profile-card__summary__info__name">
 							<h1>{employee.name}</h1>

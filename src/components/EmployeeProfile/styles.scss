@@ -3,7 +3,7 @@
 @import 'styles/design-system/index';
 
 $employee-profile-card__padding: $spacing*1.5;
-$employee-profile-card__image-column-width: 120px;
+$employee-profile-card__image-size: 120px;
 
 .employee-profile {
 	.status-banner {
@@ -25,11 +25,17 @@ $employee-profile-card__image-column-width: 120px;
 }
 
 .employee-profile-card__summary__image {
-	flex: 0 0 $employee-profile-card__image-column-width;
+	@include size($employee-profile-card__image-size);
+	flex: 0 0 $employee-profile-card__image-size;
 	margin-right: $employee-profile-card__padding;
 
+	background-size: cover;
+	background-position: center;
+	background-color: $bg-color--alt;
+
 	@media #{$small} {
-		@include size(100%);
+		@include size(100% $employee-profile-card__image-size*1.5);
+		margin-right: 0;
 		margin-bottom: $employee-profile-card__padding;
 	}
 }
@@ -63,7 +69,7 @@ $employee-profile-card__image-column-width: 120px;
 	text-align: left;
 
 	h3 {
-		flex: 0 0 $employee-profile-card__image-column-width;
+		flex: 0 0 $employee-profile-card__image-size;
 		margin-right: $employee-profile-card__padding;
 		font-size: $font-size--m;
 	}
