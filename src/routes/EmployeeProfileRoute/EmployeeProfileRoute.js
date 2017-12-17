@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 import EmployeeProfile from '../../components/EmployeeProfile';
 import Breadcrumbs from '../../components/Breadcrumbs';
@@ -34,5 +35,14 @@ function EmployeeProfileRoute({
 		</div>
 	);
 }
+
+EmployeeProfileRoute.propTypes = {
+	isLoading: PropTypes.bool.isRequired,
+	employeeName: PropTypes.string,
+};
+
+EmployeeProfileRoute.defaultProps = {
+	employeeName: '',
+};
 
 export default EmployeeProfileRoute;

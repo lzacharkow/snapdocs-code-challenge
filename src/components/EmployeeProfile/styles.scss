@@ -1,3 +1,80 @@
 // Import & extend the design system.
 
 @import 'styles/design-system/index';
+
+$employee-profile-card__padding: $spacing*1.5;
+$employee-profile-card__image-column-width: 120px;
+
+.employee-profile {
+	.status-banner {
+		margin-bottom: $spacing;
+	}
+}
+
+.employee-profile-card {
+	box-shadow: $global-box-shadow;
+	padding: $employee-profile-card__padding;
+}
+
+// Summary section (with image, name, and bio)
+.employee-profile-card__summary {
+	display: flex;
+	@media #{$small} {
+		display: block;
+	}
+}
+
+.employee-profile-card__summary__image {
+	flex: 0 0 $employee-profile-card__image-column-width;
+	margin-right: $employee-profile-card__padding;
+
+	@media #{$small} {
+		@include size(100%);
+		margin-bottom: $employee-profile-card__padding;
+	}
+}
+
+.employee-profile-card__summary__info {
+	flex: 1 1 auto;
+}
+
+.employee-profile-card__summary__info__name {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media #{$small} {
+		margin-bottom: $quarter-spacing;
+	}
+}
+
+.employee-profile-card__summary__info__bio {
+	@extend %p--headline;
+	color: $gray--dark;
+}
+
+// Details section (with all other employee details like age, etc)
+.employee-profile-card__details {
+	margin-top: $employee-profile-card__padding;
+}
+
+.employee-profile-card__details__row {
+	display: flex;
+	text-align: left;
+
+	h3 {
+		flex: 0 0 $employee-profile-card__image-column-width;
+		margin-right: $employee-profile-card__padding;
+		font-size: $font-size--m;
+	}
+
+	p {
+		flex: 1 1 auto;
+	}
+
+	+ .employee-profile-card__details__row {
+		margin-top: $half-spacing;
+		border-top: 1px solid $divider-color;
+		padding-top: $half-spacing
+	}
+}

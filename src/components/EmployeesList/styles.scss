@@ -5,8 +5,8 @@
 $employee-list__inactive-color: $bg-color--alt;
 
 .employee-list__table {
-	border-radius: $border-radius/2;
-	box-shadow: 0px 1px 10px 1px $primary-color--lightest;
+	border-radius: $global-border-radius/2;
+	box-shadow: $global-box-shadow;
 }
 
 // Rows

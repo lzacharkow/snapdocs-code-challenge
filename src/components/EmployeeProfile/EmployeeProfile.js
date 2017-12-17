@@ -21,43 +21,40 @@ function EmployeeProfile({
 	}
 
 	return (
-		<div>
+		<div className="employee-profile">
 			{inactiveElement}
 
-			<div className="employee-profile">
+			<div className="employee-profile-card">
 
-				<div className="employee-profile__summary">
-					<img
-						className="employee-profile__summary__image"
-						src=""
-						alt={employee.name}
-					/>
-					<div className="employee-profile__summary__text">
-						<div className="employee-profile__summary__heading">
-							<h1>
-								{employee.name}
-							</h1>
-							<Button secondary>
-								Edit
-							</Button>
+				{/* Image, Name, Bio, & edit */}
+				<div className="employee-profile-card__summary">
+					<img className="employee-profile-card__summary__image" src="" alt={employee.name} />
+					<div className="employee-profile-card__summary__info">
+						<div className="employee-profile-card__summary__info__name">
+							<h1>{employee.name}</h1>
+							<Button secondary>Edit</Button>
 						</div>
-						<p className="employee-profile__summary__sub-heading">
+						<p className="employee-profile-card__summary__info__bio">
 							{employee.bio}
 						</p>
 					</div>
-				</div> {/* end employee-profile__summary */}
+				</div>
 
-				<div className="employee-profile__details">
-					<div className="employee-profile__details__row">
-						Email: {employee.email}
+				{/* All other details */}
+				<div className="employee-profile-card__details">
+					<div className="employee-profile-card__details__row">
+						<h3>Email</h3>
+						<p>{employee.email}</p>
 					</div>
-					<div className="employee-profile__details__row">
-						Date of birth: {employee.date_of_birth}
-					</div>
-					<div className="employee-profile__details__row">
-						Status: {employee.active ? 'Active' : 'Not active'}
-					</div>
-				</div> {/* end employee-profile__details */}
+					<p className="employee-profile-card__details__row">
+						<h3>Date of birth</h3>
+						<p>{employee.date_of_birth}</p>
+					</p>
+					<p className="employee-profile-card__details__row">
+						<h3>Status</h3>
+						<p>{employee.active ? 'Active' : 'Not active'}</p>
+					</p>
+				</div>
 			</div>
 
 		</div>
