@@ -6,7 +6,8 @@ import _ from 'lodash';
 import EmployeesList from './EmployeesList';
 
 const mapStateToProps = state => ({
-	employees: _.map(state.employees, (employee, key) => ({
+	isLoading: state.employees.isLoading,
+	employees: _.map(state.employees.employees, (employee, key) => ({
 		...employee,
 		id: key,
 	})),

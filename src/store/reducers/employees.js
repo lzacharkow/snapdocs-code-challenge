@@ -2,14 +2,18 @@
 
 import { SET_EMPLOYEES } from '../../constants';
 
-const initialState = {};
+const initialState = {
+	isLoading: true,
+	employees: {},
+};
 
 const employees = (state = initialState, action) => {
   switch (action.type) {
     case SET_EMPLOYEES:
       return {
 			...state,
-			...action.payload.employees,
+			isLoading: false,
+			employees: action.payload.employees,
 		};
     default:
       return state;
