@@ -17,7 +17,9 @@ $font-weight--bold: 700;
 $font-weight--base: $font-weight--regular;
 
 
-// Colors
+// Base Colors
+$primary-color: #526CFF !default;
+
 $blue: #3C85EF;
 $green: #5A8B74;
 $green--light: #eff5f2;
@@ -33,10 +35,18 @@ $color--success: $green;
 $color--warning: $orange;
 $color--error: $red;
 
+
+// Element colors
+$font-color: $black;
+
 $bg-color: $white;
 $bg-color--alt: $gray--light;
 
-$font-color: $black;
+$link-color: $primary-color;
+$link-color--hover: scale-color($link-color, $lightness: -20%);
+
+$button-color: $primary-color;
+$button-color--hover: scale-color($link-color, $lightness: -20%);
 
 
 // Layout

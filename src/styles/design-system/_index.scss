@@ -7,7 +7,9 @@
 	- Naming convensions follow BEM: http://getbem.com/introduction/
 */
 
-@import 'settings/index',
+// Configurable colors.
+$primary-color: #526CFF;
+
 @import 'bourbon/bourbon',
 		'settings/index',
 		'tools/index',
