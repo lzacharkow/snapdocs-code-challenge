@@ -50,14 +50,21 @@ p {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
-a.link--primary {
+.link--primary {
 	@extend %link--primary;
 }
 
-a.link--secondary {
+.link--secondary {
 	@extend %link--secondary;
+}
+
+button {
+	font-size: inherit;
+	padding: 0;
+	border: none;
 }
 
 svg {

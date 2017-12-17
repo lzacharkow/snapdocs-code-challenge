@@ -1,3 +1,72 @@
 // Import & extend the design system.
 
 @import 'styles/design-system/index';
+
+$employee-list__inactive-color: $bg-color--alt;
+
+.employee-list__table {
+	border-radius: $border-radius/2;
+	box-shadow: 0px 1px 10px 1px $primary-color--lightest;
+}
+
+// Rows
+.employee-list__table__row {
+	padding: $half-spacing $spacing*0.75;
+	display: flex;
+	align-items: flex-start;
+
+	+ .employee-list__table__row {
+		border-top: 1px solid $divider-color;
+	}
+}
+
+.employee-list__table__row--headings {
+	padding: $quarter-spacing $spacing*0.75;
+}
+
+// Headings
+.employee-list__table__row__heading {
+	font-weight: bold;
+	font-size: $font-size--s;
+}
+
+// Cells
+.employee-list__table__row__cell--name,
+.employee-list__table__row__heading--name {
+	flex: 2 1 0;
+}
+
+.employee-list__table__row__cell--status,
+.employee-list__table__row__heading--status {
+	flex: 1 1 0;
+}
+
+.employee-list__table__row__cell--status {
+	color: $gray--dark;
+}
+
+.employee-list__table__row__cell--link,
+.employee-list__table__row__heading--link {
+	flex: 1 1 0;
+	text-align: right;
+
+	@media #{$small} {
+		span {
+			display: none;
+		}
+	}
+}
+
+// States
+.employee-list__table__row:not(.employee-list__table__row--headings) {
+	&:hover {
+		background-color: scale-color($employee-list__inactive-color, $lightness: -3%);
+	}
+	&:active {
+		background-color: scale-color($employee-list__inactive-color, $lightness: -5%);
+	}
+}
+
+.employee-list__table__row--inactive {
+	background: $employee-list__inactive-color;
+}
