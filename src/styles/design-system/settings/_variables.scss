@@ -19,6 +19,8 @@ $font-weight--base: $font-weight--regular;
 
 // Base Colors
 $primary-color: #526CFF !default;
+$primary-color--lightest: scale-color($primary-color, $lightness: 85%);
+$primary-color--darkest: scale-color($primary-color, $lightness: -70%);
 
 $blue: #3C85EF;
 $green: #5A8B74;
@@ -26,7 +28,8 @@ $green--light: #eff5f2;
 $yellow: #F1E298;
 $orange: #F0AE77;
 $red: #D7655C;
-$black: #121212;
+
+$black: $primary-color--darkest;
 $gray: #ADADBC;
 $gray--light: #F5F5F7;
 $white: #FFFFFF;
@@ -39,6 +42,8 @@ $color--error: $red;
 // Element colors
 $font-color: $black;
 
+$header-bg-color: $primary-color--lightest;
+
 $bg-color: $white;
 $bg-color--alt: $gray--light;
 
@@ -50,9 +55,15 @@ $button-color--hover: scale-color($link-color, $lightness: -20%);
 
 
 // Layout
-$spacing: 1rem;
-$half-spacing: 0.5rem;
-$quarter-spacing: 0.25rem;
+$spacing: 1.5rem;
+$half-spacing: $spacing/2;
+$quarter-spacing: $spacing/4;
+
+$page-side-padding: $half-spacing;
+$page-vertical-padding: $spacing*2;
+$page-padding: $page-vertical-padding $page-side-padding;
+
+$page-max-width: 980px;
 
 
 // Breakpoints

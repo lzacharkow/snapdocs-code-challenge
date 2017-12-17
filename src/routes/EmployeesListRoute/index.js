@@ -1,14 +1,11 @@
 // A sample route
 
 import React from 'react';
-import Header from '../../components/Header';
 import EmployeesList from '../../components/EmployeesList';
-
 
 function EmployeesListRoute() {
 	return (
-		<div className="page-wrapper">
-			<Header />
+		<div>
 			<h1>Employees list</h1>
 			<EmployeesList />
 		</div>

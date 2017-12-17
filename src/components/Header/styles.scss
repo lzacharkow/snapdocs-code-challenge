@@ -1,3 +1,30 @@
 // Import & extend the design system.
 
 @import 'styles/design-system/index';
+
+.header {
+	background: $header-bg-color;
+}
+
+.header__inner {
+	height: 80px;
+	width: 100%;
+	max-width: $page-max-width;
+
+	margin: 0 auto;
+	padding: 0 $page-side-padding;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	width: 180px;
+	flex: 0 0 auto;
+	color: $primary-color;
+}
+
+.header__account {
+	flex: 0 1 auto;
+}

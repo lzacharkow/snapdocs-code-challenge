@@ -49,9 +49,22 @@ p {
 }
 
 a {
-	@extend %a;
+	text-decoration: none;
 }
 
-.page-wrapper {
-	padding: $spacing*2;
+a.link--primary {
+	@extend %link--primary;
+}
+
+a.link--secondary {
+	@extend %link--secondary;
+}
+
+svg {
+	@include size(100%);
+	fill: currentColor;
+}
+
+.page-inner-wrapper {
+	@extend %page-inner-wrapper;
 }

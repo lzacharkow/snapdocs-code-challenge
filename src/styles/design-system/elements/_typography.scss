@@ -26,11 +26,16 @@
 	color: $gray;
 }
 
-%a {
+%link--primary {
 	color: $link-color;
 	text-decoration: none;
 	font-weight: $font-weight--bold;
 	&:hover {
 		color: $link-color--hover;
 	}
+}
+
+%link--secondary {
+	color: inherit;
+	text-decoration: underline;
 }
