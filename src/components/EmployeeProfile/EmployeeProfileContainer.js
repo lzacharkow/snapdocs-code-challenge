@@ -2,10 +2,10 @@
 
 import { connect } from 'react-redux';
 
-import CandidateProfile from './CandidateProfile';
+import EmployeeProfile from './EmployeeProfile';
 
 const mapStateToProps = (state, ownProps) => ({
 	employee: state.employees[ownProps.id],
 });
 
-export default connect(mapStateToProps)(CandidateProfile);
+export default connect(mapStateToProps)(EmployeeProfile);

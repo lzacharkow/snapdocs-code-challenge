@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 import _ from 'lodash';
 import './styles.css';
 
-import CandidatesListCandidate from './CandidatesListCandidate';
+import ListItem from './ListItem';
 
-function CandidatesList({ employees }) {
+function EmployeesList({ employees }) {
 	// Iterate through employees
 	// hide inactive
 	// show name age and email in list
@@ -24,7 +24,7 @@ function CandidatesList({ employees }) {
 		<div>
 			{filteredEmployees.map((employee) => {
 				return (
-					<CandidatesListCandidate
+					<ListItem
 						key={employee.id}
 						id={employee.id}
 						active={employee.active}
@@ -38,8 +38,8 @@ function CandidatesList({ employees }) {
 	);
 }
 
-CandidatesList.propTypes = {
+EmployeesList.propTypes = {
 	// name: PropTypes.string.isRequired,
 };
 
-export default CandidatesList;
+export default EmployeesList;

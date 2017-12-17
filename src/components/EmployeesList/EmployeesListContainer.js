@@ -2,10 +2,10 @@
 
 import { connect } from 'react-redux';
 
-import CandidatesList from './CandidatesList';
+import EmployeesList from './EmployeesList';
 
 const mapStateToProps = state => ({
 	employees: state.employees,
 });
 
-export default connect(mapStateToProps)(CandidatesList);
+export default connect(mapStateToProps)(EmployeesList);

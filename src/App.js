@@ -8,16 +8,16 @@ import {
 import Sample from './components/_Sample';
 import SampleRoute from './routes/_SampleRoute';
 
-import CandidatesRoute from './routes/CandidatesRoute';
-import CandidateRoute from './routes/CandidateRoute';
+import EmployeesListRoute from './routes/EmployeesListRoute';
+import EmployeeProfileRoute from './routes/EmployeeProfileRoute';
 import './styles/base-styles/index.css';
 
 function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route exact path="/" component={CandidatesRoute} />
-				<Route path="/:id" component={CandidateRoute} />
+				<Route exact path="/" component={EmployeesListRoute} />
+				<Route path="/:id" component={EmployeeProfileRoute} />
 				<Route render={() => <h1>4🐱4</h1>} />
 			</Switch>
 		</Router>

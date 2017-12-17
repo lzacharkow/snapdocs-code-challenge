@@ -1,6 +1,6 @@
 import React from 'react';
 
-function CandidatesListCandidate({
+function ListItem({
 	id,
 	active,
 	name,
@@ -19,4 +19,4 @@ function CandidatesListCandidate({
 	);
 }
 
-export default CandidatesListCandidate;
+export default ListItem;

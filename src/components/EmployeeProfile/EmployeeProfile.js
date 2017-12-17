@@ -4,7 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 
-function CandidateProfile({ employee }) {
+function EmployeeProfile({ employee }) {
 	console.log('employee: ', employee);
 	if (!employee) {
 		return null;
@@ -24,8 +24,8 @@ function CandidateProfile({ employee }) {
 	);
 }
 
-CandidateProfile.propTypes = {
+EmployeeProfile.propTypes = {
 	// name: PropTypes.string.isRequired,
 };
 
-export default CandidateProfile;
+export default EmployeeProfile;
