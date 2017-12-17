@@ -22,7 +22,7 @@
 }
 
 .status-banner__sub-message {
-	font-size: $font-size--s;
+	@extend %p--disclaimer;
 
 	a {
 		@extend %link--secondary;

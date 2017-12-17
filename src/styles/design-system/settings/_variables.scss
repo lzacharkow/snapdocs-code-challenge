@@ -26,7 +26,8 @@ $error-color: #FF3B6D;
 $error-color--light: scale-color($error-color, $lightness: 90%);
 
 $black: $primary-color--darkest;
-$gray: scale-color($primary-color, $lightness: 70%, $saturation: -50%);
+$gray--dark: scale-color($black, $lightness: 40%, $saturation: -80%);
+$gray: scale-color($primary-color, $lightness: 60%, $saturation: -80%);
 $gray--light: scale-color($primary-color, $lightness: 90%, $saturation: -50%);
 $white: #FFFFFF;
 
