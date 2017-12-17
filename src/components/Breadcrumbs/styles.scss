@@ -1,0 +1,21 @@
+// Import & extend the design system.
+
+@import 'styles/design-system/index';
+
+.breadcrumbs {
+	display: inline-block;
+}
+
+.breadcrumbs__breadcrumb {
+	display: inline-block;
+	&::after {
+		content: "/";
+		margin: 0 $half-spacing;
+		color: $gray--dark;
+	}
+}
+
+.breadcrumbs__current-page {
+	display: inline-block;
+	font-weight: bold;
+}
