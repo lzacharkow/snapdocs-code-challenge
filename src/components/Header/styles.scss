@@ -17,14 +17,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	@media #{$small} {
+		text-align: center;
+		display: block;
+		height: auto;
+		padding: $spacing $page-side-padding;
+	}
 }
 
 .header__logo {
 	width: 180px;
-	flex: 0 0 auto;
 	color: $primary-color;
-}
-
-.header__account {
-	flex: 0 1 auto;
 }

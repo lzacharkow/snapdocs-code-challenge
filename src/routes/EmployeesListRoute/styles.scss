@@ -1,0 +1,16 @@
+@import 'styles/design-system/index';
+
+.employee-list__heading {
+	margin-bottom: $spacing*1.5;
+	display: flex;
+	justify-content: space-between;
+
+	@media #{$small} {
+		display: block;
+		text-align: center;
+
+		.button {
+			margin-top: $half-spacing;
+		}
+	}
+}
