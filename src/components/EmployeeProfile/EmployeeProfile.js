@@ -6,6 +6,7 @@ import './styles.css';
 
 import StatusBanner from '../StatusBanner';
 import Button from '../Button';
+import getAge from '../../utils/getAge';
 
 function EmployeeProfile({
 	isLoading,
@@ -47,8 +48,8 @@ function EmployeeProfile({
 						<p>{employee.email}</p>
 					</div>
 					<p className="employee-profile-card__details__row">
-						<h3>Date of birth</h3>
-						<p>{employee.date_of_birth}</p>
+						<h3>Age</h3>
+						<p>{getAge(employee.date_of_birth)} years old</p>
 					</p>
 					<p className="employee-profile-card__details__row">
 						<h3>Status</h3>
@@ -66,7 +67,7 @@ EmployeeProfile.propTypes = {
 	employee: PropTypes.shape({
 		active: PropTypes.bool,
 		bio: PropTypes.string,
-		date_of_birth: PropTypes.string,
+		date_of_birth: PropTypes.number,
 		email: PropTypes.string,
 		name: PropTypes.string,
 	}),
