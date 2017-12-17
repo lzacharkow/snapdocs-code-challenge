@@ -1,18 +1,17 @@
 // Presentation component
 
 import React from 'react';
-import PropTypes from 'prop-types';
 import './styles.css';
 
 function EmployeeProfile({ employee }) {
-	console.log('employee: ', employee);
 	if (!employee) {
 		return null;
 	}
+
 	return (
 		<div className="page-wrapper">
 			<div className="profile__snapshot">
-				<img src="" />
+				<img src="" alt={employee.name} />
 				<h1>{employee.name}</h1>
 				<p className="p--headline">{employee.bio}</p>
 			</div>
