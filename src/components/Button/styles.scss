@@ -1,0 +1,41 @@
+// Import & extend the design system.
+
+@import 'styles/design-system/index';
+
+.button {
+	display: inline-block;
+	border-radius: $border-radius;
+	padding: $half-spacing $spacing*0.75;
+
+	background: $link-color;
+	font-weight: bold;
+	color: $white;
+
+	&:hover {
+		background: $link-color--hover;
+	}
+
+	&:active {
+		background: darken($link-color--hover, 5%);
+	}
+}
+
+
+// States
+
+.button--secondary {
+	background: transparent;
+	font-weight: bold;
+	color: $link-color;
+	border: 2px solid $link-color;
+
+	&:hover {
+		background: $link-color;
+		color: $white;
+	}
+
+	&:active {
+		background: $link-color--hover;
+		color: $white;
+	}
+}
